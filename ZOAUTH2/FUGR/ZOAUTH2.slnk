@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-16"?>
+<FUGR SPRAS="E" AREA="ZOAUTH2" AREAT="ZOAuth2 Function Group">
+ <mainprogram NAME="SAPLZOAUTH2" VARCL="X" DBAPL="S" DBNA="D$" SUBC="F" APPL="S" CNAM="MORITTU" CDAT="20110608" UNAM="FEMIA" UDAT="20110830" VERN="000004" RMAND="001" RLOAD="E" FIXPT="X" SDATE="20110830" STIME="220910" IDATE="20110830" ITIME="220722" LDBNAME="D$S" UCCHECK="X">
+  <textPool/>
+  <dynpros>
+   <dynpro PROG="SAPLZOAUTH2" DNUM="9000" TYPE="M" FNUM="9000" BZMX="8 " BZBR="59 " MILI="192 " MICO="37 " MALI="0 " MACO="0 " NOLI="27 " NOCO="120 " VALP="0 " CUAN="G" SPRA="E" DGEN="20110830" TGEN="220604" DTEXT="Auth Screen">
+    <dynprofield FNAM="%#AUTOTEXT002" DIDX="0004" FLG1="00" FLG2="00" FLG3="00" FILL="R" FMB1="30" FMB2="00" LENG="3B" LINE="01" COLN="02" LANF="00" LBLK="00" LREP="00" TYPE="CHAR" AUTH="101" AGLT="00" ADEZ="00" STXT="Please enter the PIN you received from the OAuth Provider"/>
+    <dynprofield FNAM="%#AUTOTEXT001" DIDX="0000" FLG1="00" FLG2="00" FLG3="00" FMB1="30" FMB2="00" LENG="11" LINE="02" COLN="03" LANF="00" LBLK="00" LREP="00" TYPE="CHAR" ITYP="0" AGLT="00" ADEZ="00" STXT="Verification Code" RES1="                                                                                                                                                                                                                                                        X"/>
+    <dynprofield FNAM="VERIFICATION_CODE" DIDX="0000" FLG1="80" FLG2="02" FLG3="A0" FMB1="00" FMB2="00" LENG="25" LINE="02" COLN="16" LANF="00" LBLK="00" LREP="00" TYPE="CHAR" ITYP="C" AGLT="00" ADEZ="00" STXT="_____________________________________"/>
+    <dynprofield DIDX="0000" FLG1="80" FLG2="10" FLG3="00" FMB1="00" FMB2="00" LENG="14" LINE="FF" COLN="01" LTYP="O" LANF="00" LBLK="00" LREP="00" TYPE="CHAR" AGLT="00" ADEZ="00" STXT="____________________"/>
+    <dynproflowsource>PROCESS BEFORE OUTPUT.
+* MODULE STATUS_9000.
+*
+PROCESS AFTER INPUT.
+
+MODULE USER_COMMAND_9000.</dynproflowsource>
+   </dynpro>
+  </dynpros>
+  <source>*******************************************************************
+*   System-defined Include-files.                                 *
+*******************************************************************
+  INCLUDE LZOAUTH2TOP.                       &quot; Global Data
+  INCLUDE LZOAUTH2UXX.                       &quot; Function Modules
+
+*******************************************************************
+*   User-defined Include-files (if necessary).                    *
+*******************************************************************
+* INCLUDE LZOAUTH2F...                       &quot; Subroutines
+* INCLUDE LZOAUTH2O...                       &quot; PBO-Modules
+* INCLUDE LZOAUTH2I...                       &quot; PAI-Modules
+* INCLUDE LZOAUTH2E...                       &quot; Events
+* INCLUDE LZOAUTH2P...                       &quot; Local class implement.
+
+INCLUDE LZOAUTH2I01.
+
+INCLUDE LZOAUTH2I02.</source>
+ </mainprogram>
+ <includeprograms>
+  <include NAME="LZOAUTH2I01" VARCL="X" SUBC="I" APPL="S" CNAM="MORITTU" CDAT="20110608" UNAM="FEMIA" UDAT="20110830" VERN="000003" RMAND="001" RLOAD="E" SDATE="20110830" STIME="220722" IDATE="20110830" ITIME="220722" UCCHECK="X">
+   <include_source>*----------------------------------------------------------------------*
+***INCLUDE LZOAUTH2I01 .
+*----------------------------------------------------------------------*</include_source>
+  </include>
+  <include NAME="LZOAUTH2I02" VARCL="X" SUBC="I" APPL="S" CNAM="MORITTU" CDAT="20110608" UNAM="FEMIA" UDAT="20110830" VERN="000006" RMAND="001" RLOAD="E" SDATE="20110830" STIME="220722" IDATE="20110830" ITIME="220722" UCCHECK="X">
+   <include_source>*----------------------------------------------------------------------*
+***INCLUDE LZOAUTH2I02 .
+*----------------------------------------------------------------------*
+*&amp;---------------------------------------------------------------------*
+*&amp;      Module  USER_COMMAND_9000  INPUT
+*&amp;---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+module USER_COMMAND_9000 input.
+LEAVE TO SCREEN 0.
+endmodule.                 &quot; USER_COMMAND_9000  INPUT</include_source>
+  </include>
+  <include NAME="LZOAUTH2TOP" VARCL="X" DBAPL="S" DBNA="D$" SUBC="I" APPL="S" CNAM="MORITTU" CDAT="20110608" UNAM="FEMIA" UDAT="20110830" VERN="000004" RMAND="001" FIXPT="X" SDATE="20110830" STIME="220722" IDATE="20110830" ITIME="220722" LDBNAME="D$S" UCCHECK="X">
+   <include_source>FUNCTION-POOL ZOAUTH2.                      &quot;MESSAGE-ID ..
+data: USER_NAME TYPE  ZOAUTH2_USER_NAME,
+      VERIFICATION_CODE TYPE  ZOAUTH2_TOKEN.
+* INCLUDE LZOAUTH2D...                       &quot; Local class definition</include_source>
+  </include>
+ </includeprograms>
+ <functionmodules>
+  <functionmodule NAME="ZOAUTH2_CALL_SCREEN_AUTH" STEXT="ZOAUTH2_CALL_SCREEN_AUTH">
+   <exporting PARAMETER="O_USER_NAME" REFERENCE="X" TYP="ZOAUTH2_USER_NAME"/>
+   <exporting PARAMETER="O_VERIFICATION_CODE" REFERENCE="X" TYP="ZOAUTH2_TOKEN"/>
+   <documentation PARAMETER="O_USER_NAME" KIND="P" STEXT="ZOAuth 2 - User Name" INDEX=" 001"/>
+   <documentation PARAMETER="O_VERIFICATION_CODE" KIND="P" STEXT="ZOAuth 2 - Token" INDEX=" 002"/>
+   <fm_source>call screen 9000.
+
+  move VERIFICATION_CODE to O_VERIFICATION_CODE	.</fm_source>
+  </functionmodule>
+ </functionmodules>
+</FUGR>
