@@ -1,15 +1,18 @@
 Prerequisite
  
-SAPLink correctly installed on your system
-ABAP JSON Document Class correctly installed on your system
+* SAPLink correctly installed on your system
+* ABAP JSON Document Class correctly installed on your system
+
 Installation
  
-Download nugg file from the latest release
-Install nugg file using SAPLink
+* Download nugg file from the latest release
+* Install nugg file using SAPLink
+
 Configuration
  
-Connect to https://code.google.com/apis/console/b/0/
-Request your API access (see api access1.png and api access2.png)
+* Connect to https://code.google.com/apis/console/b/0/
+* Request your API access (see api access1.png and api access2.png)
+
 Once completed connect into your ABAP system and create an entry with the data provided by the service you want to use.
  
 For example Google (see api access3.png).
