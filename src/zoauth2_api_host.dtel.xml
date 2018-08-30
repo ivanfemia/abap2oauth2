@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZOAUTH2_API_HOST</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>ZOAUTH2_STRING</DOMNAME>
+    <HEADLEN>08</HEADLEN>
+    <SCRLEN1>08</SCRLEN1>
+    <SCRLEN2>08</SCRLEN2>
+    <SCRLEN3>08</SCRLEN3>
+    <DDTEXT>ZOAuth 2 - API Host.</DDTEXT>
+    <REPTEXT>API Host</REPTEXT>
+    <SCRTEXT_S>API Host</SCRTEXT_S>
+    <SCRTEXT_M>API Host</SCRTEXT_M>
+    <SCRTEXT_L>API Host</SCRTEXT_L>
+    <DTELMASTER>E</DTELMASTER>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+  </asx:values>
+ </asx:abap>
+</abapGit>

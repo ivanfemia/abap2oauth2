@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DOMA" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD01V>
+    <DOMNAME>ZOAUTH2_SIGNATURE_METHOD</DOMNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DATATYPE>INT4</DATATYPE>
+    <LENG>000010</LENG>
+    <OUTPUTLEN>000011</OUTPUTLEN>
+    <VALEXI>X</VALEXI>
+    <DDTEXT>ZOAuth 2 - Signature Method.</DDTEXT>
+   </DD01V>
+   <DD07V_TAB>
+    <DD07V>
+     <DOMNAME>ZOAUTH2_SIGNATURE_METHOD</DOMNAME>
+     <VALPOS>0001</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>1</DOMVALUE_L>
+     <DDTEXT>User-Agent</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZOAUTH2_SIGNATURE_METHOD</DOMNAME>
+     <VALPOS>0002</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>2</DOMVALUE_L>
+     <DDTEXT>Web Server</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZOAUTH2_SIGNATURE_METHOD</DOMNAME>
+     <VALPOS>0003</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>3</DOMVALUE_L>
+     <DDTEXT>Device</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZOAUTH2_SIGNATURE_METHOD</DOMNAME>
+     <VALPOS>0004</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>4</DOMVALUE_L>
+     <DDTEXT>Username and Password</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZOAUTH2_SIGNATURE_METHOD</DOMNAME>
+     <VALPOS>0005</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>5</DOMVALUE_L>
+     <DDTEXT>Client Credentials</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZOAUTH2_SIGNATURE_METHOD</DOMNAME>
+     <VALPOS>0006</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>6</DOMVALUE_L>
+     <DDTEXT>Assertion Flow</DDTEXT>
+    </DD07V>
+   </DD07V_TAB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

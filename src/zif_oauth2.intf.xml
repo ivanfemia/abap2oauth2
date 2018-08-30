@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_INTF" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOINTERF>
+    <CLSNAME>ZIF_OAUTH2</CLSNAME>
+    <VERSION>1</VERSION>
+    <LANGU>E</LANGU>
+    <DESCRIPT>Interface OAuth2</DESCRIPT>
+    <EXPOSURE>2</EXPOSURE>
+    <STATE>1</STATE>
+    <UNICODE>X</UNICODE>
+   </VSEOINTERF>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_OAUTH2</CLSNAME>
+     <CMPNAME>CO_REQUEST_METHOD_DELETE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Request Method &apos;DEL&apos;</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_OAUTH2</CLSNAME>
+     <CMPNAME>CO_REQUEST_METHOD_GET</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Request Method &apos;GET&apos;</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_OAUTH2</CLSNAME>
+     <CMPNAME>CO_REQUEST_METHOD_POST</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Request Method &apos;POST&apos;</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_OAUTH2</CLSNAME>
+     <CMPNAME>CO_REQUEST_METHOD_PUT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Request Method &apos;PUT&apos;</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_OAUTH2</CLSNAME>
+     <CMPNAME>PROXY_HOST</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Proxy host</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_OAUTH2</CLSNAME>
+     <CMPNAME>PROXY_SERVICE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Proxy service</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_OAUTH2</CLSNAME>
+     <CMPNAME>SSL_ID</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>SSL Client Identity</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
